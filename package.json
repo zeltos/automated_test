@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./API_TEST/*.js --reporter mochawesome --reporter-options autoOpen=true --timeout 10000"
+    "test-api": "mocha ./API_TEST/*.js --reporter mochawesome --reporter-options autoOpen=true --timeout 10000",
+    "visual-reference": "cd VISUAL_TEST/ &&  backstop reference",
+    "visual": "cd VISUAL_TEST/ &&  backstop test"
   },
   "keywords": [],
   "author": "",
