@@ -4,6 +4,8 @@ const chaiHttp = require('chai-http');
 const serverApi = 'https://wikwik-store.thefthing.com/app_mobile_stable/v2'
 chai.use(chaiHttp);
 
+var token = null
+
 describe('GET /app_mobile_stable/v2/getCart_b2c.php', () => { 
   it('should response empty cart', (done)=> {
     chai.request(serverApi)
@@ -39,7 +41,15 @@ describe('GET /app_mobile_stable/v2/customer/login.php', () => {
       res.body.should.include.keys(
         'token'
         );
+        token = res.body.token
       done();
     })
+  })
+})
+
+describe('GET /app_mobile_stable/v2/customer/login.php', () => { 
+  it('should response empty cart', (done)=> {
+    console.log(token)
+    done();
   })
 })

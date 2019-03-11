@@ -2,23 +2,18 @@
   "id": "backstop_default",
   "viewports": [
     {
-      "label": "phone",
-      "width": 320,
-      "height": 480
-    },
-    {
-      "label": "tablet",
-      "width": 1024,
-      "height": 768
+      "label": "desktop 13 inc",
+      "width": 1440,
+      "height": 700
     }
   ],
   "onBeforeScript": "puppet/onBefore.js",
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
+      "label": "The F thing Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "http://localhost:3333",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -28,11 +23,13 @@
       "hoverSelector": "",
       "clickSelector": "",
       "postInteractionWait": 0,
-      "selectors": [],
+      "selectors": ["#exampleModal .modal-content"],
       "selectorExpansion": true,
       "expect": 0,
       "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
+      "requireSameDimensions": true,
+      "onBeforeScript": "puppet/beforeReady.js",
+      "onReadyScript": "puppet/fillTheForm.js"
     }
   ],
   "paths": {
