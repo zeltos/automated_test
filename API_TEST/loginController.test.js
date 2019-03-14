@@ -29,7 +29,7 @@ describe('GET /app_mobile_stable/v2/customer/login.php', () => {
   it('should response empty cart', (done)=> {
     chai.request(serverApi)
     .post('/customer/login.php')
-    .send({"body":{"email":"medianto.jaelani@gmail.com","password":"Sebelas20"}})
+    .send({"body":{"email":"medianto.jaelani@gmail.com","password":"password"}})
     .end((err,res)=> {
       should.not.exist(err);
       res.should.have.status(200);
