@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-06T03:22:12.018Z",
+    "end": "2020-03-06T03:22:41.595Z",
+    "duration": 29577,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad2b182e-0a61-4924-b56a-633680de1f03",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [
+        {
+          "title": "\"before all\" hook",
+          "fullTitle": "\"before all\" hook",
+          "timedOut": false,
+          "duration": 1005,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "global.expect = expect;\nglobal.browser = await puppeteer.launch(opts);",
+          "err": {},
+          "uuid": "46c4c205-8dc7-4084-ac5b-fb28e83381f0",
+          "parentUUID": "ad2b182e-0a61-4924-b56a-633680de1f03",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "afterHooks": [
+        {
+          "title": "\"after all\" hook",
+          "fullTitle": "\"after all\" hook",
+          "timedOut": false,
+          "duration": 319,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "browser.close();\nglobal.browser = globalVariables.browser;\nglobal.expect = globalVariables.expect;",
+          "err": {},
+          "uuid": "deb26eed-3c05-447c-8ed5-3d164bb877c0",
+          "parentUUID": "ad2b182e-0a61-4924-b56a-633680de1f03",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27f1c47a-e85e-4d5f-ad8d-6d71e4adc622",
+          "title": "The F thing Automate Test",
+          "fullFile": "/Applications/MezeltosWorkspace/automated_test/PUPPETEER/login.test.js",
+          "file": "/login.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "The F thing Automate Test \"before all\" hook",
+              "timedOut": false,
+              "duration": 12192,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "page = await browser.newPage();\nawait page.setViewport( { width: 1440, height: 900} );\nawait page.goto(\"https://thefthing.com/\");",
+              "err": {},
+              "uuid": "92b37009-d5c6-4f84-a920-04078cc9e0e0",
+              "parentUUID": "27f1c47a-e85e-4d5f-ad8d-6d71e4adc622",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook",
+              "fullTitle": "The F thing Automate Test \"after all\" hook",
+              "timedOut": false,
+              "duration": 137,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await page.close();",
+              "err": {},
+              "uuid": "0b1d460f-9952-4876-beae-7e746f20cc1e",
+              "parentUUID": "27f1c47a-e85e-4d5f-ad8d-6d71e4adc622",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should login to home page",
+              "fullTitle": "The F thing Automate Test should login to home page",
+              "timedOut": false,
+              "duration": 15901,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginLink = await page.$('#login-anchor');\nloginEmailInput = await page.$('#login_form #exampleInputEmail1')\nloginPasswordInput = await page.$('#login_form #exampleInputPassword1')\nloginSubmit = await page.$('#login_form .btn-fthing-full')\n      \nawait loginLink.click();\nawait page.waitForSelector('#login_form')\nawait loginEmailInput.type('medianto.jaelani@gmail.com')\nawait loginPasswordInput.type('Sebelas20')\nawait loginSubmit.click()\n\n        //  await linkEmail.type('tariqul.islam.rony@gmail.com'); // add the email address for linkedin //\n\n        //  await linkPassword.click({ clickCount: 3});\n        //  await linkPassword.type('programmerrony01'); // add password for linkedin account\n\n        //  await linkSubmit.click();\nawait page.waitForNavigation();\nawait page.waitForSelector('.service-wrapper')\nlinkAccount = await page.$('.service-wrapper li a')\nawait linkAccount.click()\nconsole.log('sudah login')\nawait page.waitFor(500);\nexpect(page.url()).to.contain('/customer')",
+              "err": {},
+              "uuid": "6510b576-5aba-45ff-aea2-9b414b15c88b",
+              "parentUUID": "27f1c47a-e85e-4d5f-ad8d-6d71e4adc622",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6510b576-5aba-45ff-aea2-9b414b15c88b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15901,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

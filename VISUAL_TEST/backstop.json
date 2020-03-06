@@ -14,7 +14,7 @@
       "label": "The F thing Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3333",
-      "referenceUrl": "",
+      "referenceUrl": "https://thefthing.com",
       "readyEvent": "",
       "readySelector": "",
       "delay": 0,
@@ -30,6 +30,25 @@
       "requireSameDimensions": true,
       "onBeforeScript": "puppet/beforeReady.js",
       "onReadyScript": "puppet/fillTheForm.js"
+    },
+    {
+      "label": "The F thing Men",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:3333/men",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
