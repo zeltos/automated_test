@@ -2,3 +2,5 @@ node_modules
 .VISUAL_TEST/backstop_data/bitmaps_reference
 .VISUAL_TEST/backstop_data/bitmaps_test
 .VISUAL_TEST/backstop_data/html_report
+mochawesome-report
+PUPPETEER/mochawesome-report
